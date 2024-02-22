@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		401915172B53113C007BF62C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 401915162B53113C007BF62C /* main.cpp */; };
+		401915202B5311D2007BF62C /* Structures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4019151E2B5311D2007BF62C /* Structures.cpp */; };
+		401915232B53179F007BF62C /* Triangulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 401915212B53179E007BF62C /* Triangulation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		401915132B53113C007BF62C /* Delaunay_Triangulation_Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Delaunay_Triangulation_Project; sourceTree = BUILT_PRODUCTS_DIR; };
 		401915162B53113C007BF62C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4019151E2B5311D2007BF62C /* Structures.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Structures.cpp; sourceTree = "<group>"; };
+		4019151F2B5311D2007BF62C /* Structures.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Structures.hpp; sourceTree = "<group>"; };
+		401915212B53179E007BF62C /* Triangulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangulation.cpp; sourceTree = "<group>"; };
+		401915222B53179F007BF62C /* Triangulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Triangulation.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				401915162B53113C007BF62C /* main.cpp */,
+				4019151E2B5311D2007BF62C /* Structures.cpp */,
+				4019151F2B5311D2007BF62C /* Structures.hpp */,
+				401915212B53179E007BF62C /* Triangulation.cpp */,
+				401915222B53179F007BF62C /* Triangulation.hpp */,
 			);
 			path = Delaunay_Triangulation_Project;
 			sourceTree = "<group>";
@@ -119,7 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				401915232B53179F007BF62C /* Triangulation.cpp in Sources */,
 				401915172B53113C007BF62C /* main.cpp in Sources */,
+				401915202B5311D2007BF62C /* Structures.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
