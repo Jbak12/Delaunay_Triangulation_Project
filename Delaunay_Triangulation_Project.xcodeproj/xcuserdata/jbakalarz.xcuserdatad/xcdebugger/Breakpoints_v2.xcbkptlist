@@ -7,17 +7,637 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BE58C4D3-2582-4F95-B6A3-1640D79A9A5D"
+            uuid = "C91CC393-85D7-4997-B084-F3138B9FE3DA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "Triangulation"
-            landmarkType = "3">
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C91CC393-85D7-4997-B084-F3138B9FE3DA - 5759c3da9e2be44a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::bowyerWatson()"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "C91CC393-85D7-4997-B084-F3138B9FE3DA - 5759c3da9e2be44a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::bowyerWatson()"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "760">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "954556C5-6622-4424-A22F-17B0FDE56D1E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F587183-2085-4814-894D-47A4472BDF09"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5A0D66B-44E1-4F57-9CCB-0C91556C838D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFCC86FB-7574-46A2-803C-0C6E2591D269"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "findBadTriangles(startTriangle, point, adjacencyList)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6FC199F-C739-42B2-BBF5-B71D0D4D58B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "findNeighborsOfBadTriangles(badTriangles, adjacencyList)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "39193A82-6489-4B81-955E-F9030E5FBBDA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B0AA78C-5D26-4A84-9675-D96BF01288E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "findBoundaryEdges(triangles, centreTriangle)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0F8D784-62DA-4179-9467-9494F07B5496"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1197B52B-5BB7-4921-8128-7BE543205764"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30188C9B-2AC6-438C-B378-DD0CFCCFD241"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7B2CCEB6-6B77-4921-976B-0EF50CAC43F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "986A19CB-2BCC-438F-B527-A1CB1351C779"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAD188B0-D1DB-401E-A033-D95F31D76168"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75D5BFFC-AE9D-4CEB-9681-C51595598451"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "75D5BFFC-AE9D-4CEB-9681-C51595598451 - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "75D5BFFC-AE9D-4CEB-9681-C51595598451 - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "75D5BFFC-AE9D-4CEB-9681-C51595598451 - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "756">
+               </Location>
+               <Location
+                  uuid = "75D5BFFC-AE9D-4CEB-9681-C51595598451 - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "840">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C9DD8FD-667F-421A-A41E-C58D416DD79E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C9DD8FD-667F-421A-A41E-C58D416DD79E - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "3C9DD8FD-667F-421A-A41E-C58D416DD79E - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "3C9DD8FD-667F-421A-A41E-C58D416DD79E - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "756">
+               </Location>
+               <Location
+                  uuid = "3C9DD8FD-667F-421A-A41E-C58D416DD79E - 8b98f2ca9939e182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "840">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1DAD9A0C-2935-4316-A3DC-1A80F27F740F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BF1465E-302C-463D-A6CB-F2C2701FF04E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B5FD736-8953-4252-8A5D-8F56939E01DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9E58291-443C-4816-B9FE-2E3948FE0D22"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9E58291-443C-4816-B9FE-2E3948FE0D22 - 8b98f2ca9939ea07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "D9E58291-443C-4816-B9FE-2E3948FE0D22 - 8b98f2ca9939ea07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAA5CB42-C617-49F0-A580-9A445BAC8E49"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "790777E1-F5E2-4F1D-84E4-BE306A803B84"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "790777E1-F5E2-4F1D-84E4-BE306A803B84 - 8b98f2ca9939e53f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "790777E1-F5E2-4F1D-84E4-BE306A803B84 - 8b98f2ca9939e53f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Triangulation::updateAdjacencyListForNewTriangles(std::__1::map&lt;Triangle, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt;, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;std::__1::pair&lt;Triangle const, std::__1::set&lt;Triangle, std::__1::less&lt;Triangle&gt;, std::__1::allocator&lt;Triangle&gt; &gt; &gt; &gt; &gt;&amp;, std::__1::vector&lt;Triangle, std::__1::allocator&lt;Triangle&gt; &gt; const&amp;)"
+                  moduleName = "Delaunay_Triangulation_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jbakalarz/Student/Delaunay_Triangulation_Project/Delaunay_Triangulation_Project/Triangulation.hpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "388">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06CE535A-5D22-4002-8C79-E2E3314EBBB3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "findTriangleContainingPoint(point)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BDBD252-BA1C-4F05-8F4B-F56394F16402"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "findTriangleContainingPoint(point)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6AF3966-5C23-438E-BA8A-A77026987819"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "findTriangleContainingPoint(point)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32DE04E4-9554-473A-A451-F4091F847490"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "findTriangleContainingPoint(point)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

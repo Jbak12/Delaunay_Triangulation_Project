@@ -14,34 +14,49 @@
 #include <unordered_set>
 #include <set>
 #include "Structures.hpp"
+#include <functional>
+#include <iostream>
 
 class Triangulation {
 private:
-    Triangle superTriangle;
+    int width;
+    int height;
+    Triangle _superTriangle;
     std::set<Triangle> triangulation;
     std::vector<Point> points;
     std::map <Triangle, std::set<Triangle> > adjacency_list;
 public:
-    Triangulation(int x, int y, std::vector<Point> points) {
-        for (auto point : points) {
+    Triangulation(int x, int y, std::vector<Point> _points) {
+        width = x;
+        height = y;
+        for (auto point : _points) {
             points.push_back(point);
         }
     }
     
     void bowyerWatson() {
-        Triangle superTriangle = calculateSuperTriangle(0, 0, 200, 200);
+        Triangle superTriangle = calculateSuperTriangle(0, 0, width, height);
+        _superTriangle = superTriangle;
         triangulation.insert(superTriangle);
+        int i = 0;
         for(auto& point : points) {
             Triangle selectedTriangle = findTriangleContainingPoint(point);
             std::vector<Triangle> badTriangles = findBadTriangles(selectedTriangle, point, adjacency_list);
+            std::cout<<"FOUND POINT"<< point << " IN "<<selectedTriangle<<std::endl;
             std::vector<Triangle> neighborsOfBadTriangles = findNeighborsOfBadTriangles(badTriangles, adjacency_list);
+            removeBadTriangles(badTriangles, triangulation, adjacency_list);
             std::vector<Edge> polygonEdges = findBoundaryEdges(badTriangles, selectedTriangle);
             std::vector<Triangle> newTriangles = createTrianglesFromPolygon(polygonEdges, point, triangulation);
-            std::vector<Triangle> badTrianglesAndNeighbors = concatenateVectors(newTriangles, neighborsOfBadTriangles);
-            updateAdjacencyListForNewTriangles(adjacency_list, badTrianglesAndNeighbors);
-            removeBadTriangles(badTriangles, triangulation, adjacency_list);
+            std::vector<Triangle> newTrianglesAndBadAndNeighbors = concatenateVectors(newTriangles, neighborsOfBadTriangles);
+            updateAdjacencyListForNewTriangles(adjacency_list, newTrianglesAndBadAndNeighbors);
+            std::cout<<"i: "<< i << std::endl;
+            i++;
         }
-
+        
+    }
+    
+    std::set<Triangle> getTriangulation() {
+        return triangulation;
     }
     
     std::vector<Triangle> concatenateVectors(const std::vector<Triangle>& vec1, const std::vector<Triangle>& vec2) {
@@ -144,21 +159,32 @@ public:
 
         // Update the adjacency list for new triangles
         for (const Triangle& newTriangle : newTriangles) {
+            //debug print
+//            for (const auto& pair : edgeToTriangles) {
+//                const std::vector<Triangle>& triangles = pair.second;
+//                const Edge& edge = pair.first;
+//                std::cout <<edge<<std::endl;
+//                for(Triangle t : triangles) {
+//                    std::cout<<t<<std::endl;
+//                }
+//
+//            }
+            
             std::set<Edge> newTriangleEdges = newTriangle.generateEdges();
-            std::set<Triangle>& newTriangleNeighbors = adjacencyList[newTriangle];
 
             for (const Edge& edge : newTriangleEdges) {
                 const std::vector<Triangle>& trianglesSharingEdge = edgeToTriangles[edge];
                 for (const Triangle& adjacentTriangle : trianglesSharingEdge) {
-                    if (newTriangle != adjacentTriangle) {
+                    if (!(newTriangle == adjacentTriangle)) {
                         // Add the adjacent triangle to the new triangle's neighbors
-                        newTriangleNeighbors.insert(adjacentTriangle);
+                        adjacencyList[newTriangle].insert(adjacentTriangle);
                         // Also add the new triangle to the adjacent triangle's neighbors
                         adjacencyList[adjacentTriangle].insert(newTriangle);
                     }
                 }
             }
         }
+        
     }
     
     
@@ -188,7 +214,7 @@ public:
                     continue; // Skip already visited neighbors
                 }
 
-                Point center = neighbor.circumCenter;
+                Point center = neighbor.getRoundedCircumCentre();
                 double distance = point.distanceTo(center); // Assuming Point class has a method to calculate distance
 
                 if (distance < closestDistance) {
@@ -206,6 +232,7 @@ public:
             currentTriangle = closestNeighbor;
         }
 
+        return currentTriangle;
         return currentTriangle;
     }
     

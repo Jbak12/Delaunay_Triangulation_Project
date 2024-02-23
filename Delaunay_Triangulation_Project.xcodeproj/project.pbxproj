@@ -10,6 +10,7 @@
 		401915172B53113C007BF62C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 401915162B53113C007BF62C /* main.cpp */; };
 		401915202B5311D2007BF62C /* Structures.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4019151E2B5311D2007BF62C /* Structures.cpp */; };
 		401915232B53179F007BF62C /* Triangulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 401915212B53179E007BF62C /* Triangulation.cpp */; };
+		AB2F2E822B882E99008488E5 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = AB2F2E812B882E99008488E5 /* makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		4019151F2B5311D2007BF62C /* Structures.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Structures.hpp; sourceTree = "<group>"; };
 		401915212B53179E007BF62C /* Triangulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangulation.cpp; sourceTree = "<group>"; };
 		401915222B53179F007BF62C /* Triangulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Triangulation.hpp; sourceTree = "<group>"; };
+		AB2F2E812B882E99008488E5 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				4019151F2B5311D2007BF62C /* Structures.hpp */,
 				401915212B53179E007BF62C /* Triangulation.cpp */,
 				401915222B53179F007BF62C /* Triangulation.hpp */,
+				AB2F2E812B882E99008488E5 /* makefile */,
 			);
 			path = Delaunay_Triangulation_Project;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			files = (
 				401915232B53179F007BF62C /* Triangulation.cpp in Sources */,
 				401915172B53113C007BF62C /* main.cpp in Sources */,
+				AB2F2E822B882E99008488E5 /* makefile in Sources */,
 				401915202B5311D2007BF62C /* Structures.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -265,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

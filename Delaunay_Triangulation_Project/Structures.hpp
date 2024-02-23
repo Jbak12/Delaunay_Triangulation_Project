@@ -9,8 +9,9 @@
 #define Structures_hpp
 
 #include <stdio.h>
+#include <iostream>
 #include <set>
-#include <array>
+#include <vector>
 #include <cmath>
 
 struct Point {
@@ -30,29 +31,47 @@ struct Point {
         double dy = y - other.y;
         return std::sqrt(dx * dx + dy * dy);
     }
+    
+    friend std::ostream& operator<<(std::ostream& os, const Point& point) {
+        os << " (" << point.x << ", " << point.y << ") ";
+        return os;
+    }
 };
 
 struct Edge {
     Point a;
     Point b;
-    Edge(Point _a, Point _b) : a(_a), b(_b) {}
+    Edge(Point _a, Point _b) {
+        if (_a < _b) {
+            a = _a;
+            b = _b;
+        } else {
+            a = _b;
+            b = _a;
+        }
+    }
     bool operator == (const Edge& other) const  {
         return ((other.a == a && other.b == b) || (other.b == a && other.a == b) );
     }
     bool operator<(const Edge& other) const {
-       if (a < other.a) return true;
-       if (other.a < a) return false;
-       return b < other.b;
-   }
-    
+        if (a < other.a) return true;
+        if (other.a < a) return false;
+        return b < other.b;
+    }
+
+    friend std::ostream& operator<<(std::ostream& os, const Edge& edge) {
+        os << "EDGE: " << edge.a << ", " << edge.b;
+        return os;
+    }
 };
+
 
 class Triangle {
 public:
     
-    bool operator==(const Triangle& other) const {
-            std::array<Point, 3> thisPoints = {a, b, c};
-            std::array<Point, 3> otherPoints = {other.a, other.b, other.c};
+    bool operator == (const Triangle& other) const {
+            std::vector<Point> thisPoints = {a, b, c};
+            std::vector<Point> otherPoints = {other.a, other.b, other.c};
             
             // Sort vertices of both triangles
             std::sort(thisPoints.begin(), thisPoints.end());
@@ -61,11 +80,20 @@ public:
             // Check for equality
             return (thisPoints[0] == otherPoints[0] && thisPoints[1] == otherPoints[1] && thisPoints[2] == otherPoints[2]);
         }
+
+    bool operator < (const Triangle& other) const {
+        if (a < other.a) return true;
+        if (other.a < a) return false;
+        return b < other.b;
+    }
     
     Point a;
     Point b;
     Point c;
-    Point circumCenter;
+    std::pair < double, double > circumCenter;
+    Point getRoundedCircumCentre() const {
+        return Point(circumCenter.first, circumCenter.second);
+    }
     double circumRadius;
 
     Triangle() : a(Point()), b(Point()), c(Point()) {
@@ -75,22 +103,23 @@ public:
     Triangle(Point _a, Point _b, Point _c): a(_a), b(_b), c(_c) {
         calculateCircumCircle();
     }
+
     
+    std::pair<double, double> calculateCircumCenter() {
+        double d = 2 * (a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y));
 
-    Point calculateCircumCenter() {
-        Point _circumCenter;
-        double detT = (b.y - c.y) * (a.x - c.x) + (c.x - b.x) * (a.y - c.y);
-        double alpha = ((b.y - c.y) * (a.x - c.x) + (c.x - b.x) * (a.y - c.y)) / detT;
-        double beta = ((c.y - a.y) * (a.x - c.x) + (a.x - c.x) * (a.y - c.y)) / detT;
-        double gamma = 1 - alpha - beta;
+        double ux = ((a.x * a.x + a.y * a.y) * (b.y - c.y) + (b.x * b.x + b.y * b.y) * (c.y - a.y) + (c.x * c.x + c.y * c.y) * (a.y - b.y)) / d;
+        double uy = ((a.x * a.x + a.y * a.y) * (c.x - b.x) + (b.x * b.x + b.y * b.y) * (a.x - c.x) + (c.x * c.x + c.y * c.y) * (b.x - a.x)) / d;
 
-        _circumCenter.x = static_cast<int>(alpha * a.x + beta * b.x + gamma * c.x);
-        _circumCenter.y = static_cast<int>(alpha * a.y + beta * b.y + gamma * c.y);
-        return _circumCenter;
+        return std::pair(ux, uy);
+        
+        
+        
     }
     double calculateCircumRadius() const {
-        double dx = circumCenter.x - a.x;
-        double dy = circumCenter.y - a.y;
+
+        double dx = circumCenter.first - a.x;
+        double dy = circumCenter.second - a.y;
         return std::sqrt(dx * dx + dy * dy);
     }
     
@@ -110,8 +139,8 @@ public:
     }
     
     bool circumCircleContainPoint(Point p) const {
-        double dx = p.x - circumCenter.x;
-        double dy = p.y - circumCenter.y;
+        double dx = p.x - circumCenter.first;
+        double dy = p.y - circumCenter.second;
         double distanceSquared = dx * dx + dy * dy;
 
         return distanceSquared <= (circumRadius * circumRadius);
@@ -123,8 +152,30 @@ public:
         edges.insert(Edge(c, a));
         return edges;
     }
+    
+    friend std::ostream& operator<<(std::ostream& os, const Triangle& triangle) {
+        os << "Triangle: " << triangle.a << ", " << triangle.b << ", " << triangle.c;
+        return os;
+    }
 
 };
+
+namespace std {
+    template <>
+    struct hash<Triangle> {
+        size_t operator()(const Triangle& triangle) const {
+            // Compute individual hash values for two data members and combine them using XOR
+            // and bit shifting. This is just an example; your actual implementation may vary.
+            // You might need to include other headers for hash functions for custom types.
+            
+            // For example, if your Triangle class has three Point members: a, b, and c
+            // and Point has x and y as members, you could hash them as follows:
+            return ((hash<int>()(triangle.a.x) ^ (hash<int>()(triangle.a.y) << 1)) >> 1) ^
+            (hash<int>()(triangle.b.x) ^ (hash<int>()(triangle.b.y) << 1)) ^
+            ((hash<int>()(triangle.c.x) ^ (hash<int>()(triangle.c.y) << 1)) << 1) ;
+        }
+    };
+}
 
 
 
