@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <set>
+#include <array>
 #include <cmath>
 
 struct Point {
@@ -49,9 +50,17 @@ struct Edge {
 class Triangle {
 public:
     
-    bool operator == (const Triangle& other) const  {
-        return (a == other.a && b == other.b && c == other.c);
-    }
+    bool operator==(const Triangle& other) const {
+            std::array<Point, 3> thisPoints = {a, b, c};
+            std::array<Point, 3> otherPoints = {other.a, other.b, other.c};
+            
+            // Sort vertices of both triangles
+            std::sort(thisPoints.begin(), thisPoints.end());
+            std::sort(otherPoints.begin(), otherPoints.end());
+
+            // Check for equality
+            return (thisPoints[0] == otherPoints[0] && thisPoints[1] == otherPoints[1] && thisPoints[2] == otherPoints[2]);
+        }
     
     Point a;
     Point b;
@@ -107,7 +116,7 @@ public:
 
         return distanceSquared <= (circumRadius * circumRadius);
     }
-    std::set<Edge> generateEdges() {
+    std::set<Edge> generateEdges() const {
         std::set<Edge> edges;
         edges.insert(Edge(a, b));
         edges.insert(Edge(b, c));
