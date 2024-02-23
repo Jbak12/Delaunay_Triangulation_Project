@@ -23,18 +23,6 @@ void saveTrianglesToFile(const std::set<Triangle>& triangles, const std::string&
 }
 
 int main(int argc, const char * argv[]) {
-//    std::vector<Point> points = {
-//        Point(3, 1),
-//        Point(6, 2),
-//        Point(3, 4),
-//        Point(5, 4),
-//        Point(6, 6),
-//        Point(4,5),
-//        Point(9,5),
-//        Point(9,3),
-//        Point(7,4),
-//        Point(8,1)
-//    };
     std::vector<Point> _points = {
         Point(6, 8),
         Point(16, 12),
@@ -61,21 +49,10 @@ int main(int argc, const char * argv[]) {
         Point(3, 8)
     };
     
-
-    // std::vector<Point> points = {
-    //     Point(3, 1),
-    //     Point(6, 2),
-    //     Point(3, 4),
-    //     Point(5, 4)
-    // };
-    auto* triangulation = new Triangulation(10, 10, points);
-    triangulation->bowyerWatson();
-    auto triang = triangulation->getTriangulation();
+    auto triangulation = Triangulation(10, 10, points);
+    triangulation.bowyerWatson();
+    auto triang = triangulation.getTriangulation();
     saveTrianglesToFile(triang, "triangles.txt");
-    
-    std::cout << "super:"<<std::endl;
-    Triangle super = triangulation->calculateSuperTriangle(20, 20);
-    std::cout << super.a << super.b << super.c << std::endl;
     
     std::cout << "triangulacja:"<<std::endl;
     for(auto& triangle : triang) {

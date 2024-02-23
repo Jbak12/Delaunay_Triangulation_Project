@@ -14,9 +14,9 @@ all: $(TARGETS)
 
 
 clean:
-	rm -f $(OBJS) $(TARGETS) 
+	rm -f $(OBJS) $(TARGETS)
 	
-run_python:
+visualise:
 	python3 ReadFile.py
 
 .PHONY: all run clean

@@ -14,8 +14,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "bowyerWatson()"
             landmarkType = "7">
             <Locations>
@@ -50,22 +50,6 @@
                   offsetFromSymbolStart = "824">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "954556C5-6622-4424-A22F-17B0FDE56D1E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "bowyerWatson()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,8 +94,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "findNeighborsOfBadTriangles(badTriangles, adjacencyList)"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,6 +104,54 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "39193A82-6489-4B81-955E-F9030E5FBBDA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "bowyerWatson()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B0AA78C-5D26-4A84-9675-D96BF01288E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "findBoundaryEdges(triangles, centreTriangle)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0F8D784-62DA-4179-9467-9494F07B5496"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1197B52B-5BB7-4921-8128-7BE543205764"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -135,54 +167,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8B0AA78C-5D26-4A84-9675-D96BF01288E2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "findBoundaryEdges(triangles, centreTriangle)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E0F8D784-62DA-4179-9467-9494F07B5496"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1197B52B-5BB7-4921-8128-7BE543205764"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "bowyerWatson()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "30188C9B-2AC6-438C-B378-DD0CFCCFD241"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -190,8 +174,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "bowyerWatson()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +190,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "bowyerWatson()"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +206,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
             landmarkType = "7">
          </BreakpointContent>
@@ -238,8 +222,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
             landmarkType = "7">
             <Locations>
@@ -316,8 +300,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
             landmarkType = "7">
             <Locations>
@@ -394,8 +378,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,8 +394,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
             landmarkType = "7">
          </BreakpointContent>
@@ -426,8 +410,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "createTrianglesFromPolygon(edges, p, _triangulation)"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,8 +426,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
             landmarkType = "7">
             <Locations>
@@ -490,8 +474,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,8 +490,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "updateAdjacencyListForNewTriangles(adjacencyList, newTriangles)"
             landmarkType = "7">
             <Locations>
@@ -547,118 +531,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "06CE535A-5D22-4002-8C79-E2E3314EBBB3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
-            landmarkName = "_findTriangleContainingPoint(point)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3BDBD252-BA1C-4F05-8F4B-F56394F16402"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
-            landmarkName = "_findTriangleContainingPoint(point)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D6AF3966-5C23-438E-BA8A-A77026987819"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
-            landmarkName = "_findTriangleContainingPoint(point)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "32DE04E4-9554-473A-A451-F4091F847490"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
-            landmarkName = "_findTriangleContainingPoint(point)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8B24BE1C-A9E4-46B6-8D13-6ECB74BD6CF9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "bowyerWatson()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C974794C-8ECF-4616-88C3-C2352F0EB07B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
-            landmarkName = "_findTriangleContainingPoint(point)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9392B27C-D466-47A4-A4F4-49E3AF592B44"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
-            landmarkName = "_findTriangleContainingPoint(point)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C6ECB1BF-C0D8-444B-81F0-F3282B819DF3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -666,8 +538,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "removeConnectedToSuperTriangle(triangulation, superTriangle)"
             landmarkType = "7">
          </BreakpointContent>
@@ -682,8 +554,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "bowyerWatson()"
             landmarkType = "7">
             <Locations>
@@ -730,8 +602,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "removeConnectedToSuperTriangle(triangulation, superTriangle)"
             landmarkType = "7">
          </BreakpointContent>
@@ -746,8 +618,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "removeConnectedToSuperTriangle(triangulation, superTriangle)"
             landmarkType = "7">
          </BreakpointContent>
@@ -762,8 +634,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "findNeighborsOfBadTriangles(badTriangles, adjacencyList)"
             landmarkType = "7">
             <Locations>
@@ -810,8 +682,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "findNeighborsOfBadTriangles(badTriangles, adjacencyList)"
             landmarkType = "7">
          </BreakpointContent>
@@ -826,8 +698,8 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "removeBadTriangles(badTriangles, _triangulation, adjacencyList)"
             landmarkType = "7">
          </BreakpointContent>
@@ -842,25 +714,9 @@
             filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "removeBadTriangles(badTriangles, _triangulation, adjacencyList)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "47C86AE0-4B87-4511-97FD-D344637B886B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delaunay_Triangulation_Project/Triangulation.hpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "bowyerWatson()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
