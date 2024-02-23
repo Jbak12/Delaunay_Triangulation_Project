@@ -21,8 +21,8 @@ def plot_triangles(vertices_list):
             all_y.append(y)
     
     # Set the plot limits to include all points
-    ax.set_xlim(min(all_x) - 1, 40)
-    ax.set_ylim(min(all_y) - 1, 40)
+    ax.set_xlim(min(all_x) - 1, 10)
+    ax.set_ylim(min(all_y) - 1, 10)
     
     # Add a grid for better visibility
     ax.grid(True)

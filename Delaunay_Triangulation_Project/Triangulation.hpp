@@ -61,7 +61,7 @@ public:
             std::cout<<"i: "<< i << std::endl;
             i++;
         }
-        removeConnectedToSuperTriangle(triangulation, superTriangle);
+//        removeConnectedToSuperTriangle(triangulation, superTriangle);
         
     }
     
