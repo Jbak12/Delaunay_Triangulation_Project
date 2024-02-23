@@ -33,6 +33,8 @@
 		401915212B53179E007BF62C /* Triangulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Triangulation.cpp; sourceTree = "<group>"; };
 		401915222B53179F007BF62C /* Triangulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Triangulation.hpp; sourceTree = "<group>"; };
 		AB2F2E812B882E99008488E5 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		AB2F2E832B888647008488E5 /* triangles.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = triangles.txt; sourceTree = "<group>"; };
+		AB2F2E842B8888D1008488E5 /* ReadFile.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = ReadFile.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,9 @@
 		401915152B53113C007BF62C /* Delaunay_Triangulation_Project */ = {
 			isa = PBXGroup;
 			children = (
+				AB2F2E842B8888D1008488E5 /* ReadFile.py */,
 				401915162B53113C007BF62C /* main.cpp */,
+				AB2F2E832B888647008488E5 /* triangles.txt */,
 				4019151E2B5311D2007BF62C /* Structures.cpp */,
 				4019151F2B5311D2007BF62C /* Structures.hpp */,
 				401915212B53179E007BF62C /* Triangulation.cpp */,

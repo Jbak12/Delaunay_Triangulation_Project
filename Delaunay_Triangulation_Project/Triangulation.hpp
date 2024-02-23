@@ -16,6 +16,8 @@
 #include "Structures.hpp"
 #include <functional>
 #include <iostream>
+#include <queue>
+
 
 class Triangulation {
 private:
@@ -35,23 +37,31 @@ public:
     }
     
     void bowyerWatson() {
-        Triangle superTriangle = calculateSuperTriangle(0, 0, width, height);
+        Triangle superTriangle = calculateSuperTriangle(width, height);
         _superTriangle = superTriangle;
         triangulation.insert(superTriangle);
         int i = 0;
         for(auto& point : points) {
-            Triangle selectedTriangle = findTriangleContainingPoint(point);
+            Triangle selectedTriangle;
+            try {
+                 selectedTriangle = findTriangleContainingPoint(point);
+            } catch (const std::runtime_error& e) {
+                continue;
+            }
+           
             std::vector<Triangle> badTriangles = findBadTriangles(selectedTriangle, point, adjacency_list);
             std::cout<<"FOUND POINT"<< point << " IN "<<selectedTriangle<<std::endl;
             std::vector<Triangle> neighborsOfBadTriangles = findNeighborsOfBadTriangles(badTriangles, adjacency_list);
             removeBadTriangles(badTriangles, triangulation, adjacency_list);
             std::vector<Edge> polygonEdges = findBoundaryEdges(badTriangles, selectedTriangle);
             std::vector<Triangle> newTriangles = createTrianglesFromPolygon(polygonEdges, point, triangulation);
+            
             std::vector<Triangle> newTrianglesAndBadAndNeighbors = concatenateVectors(newTriangles, neighborsOfBadTriangles);
             updateAdjacencyListForNewTriangles(adjacency_list, newTrianglesAndBadAndNeighbors);
             std::cout<<"i: "<< i << std::endl;
             i++;
         }
+        removeConnectedToSuperTriangle(triangulation, superTriangle);
         
     }
     
@@ -85,11 +95,31 @@ public:
     
     void removeBadTriangles(const std::vector<Triangle>& badTriangles, std::set<Triangle>& _triangulation, std::map <Triangle, std::set<Triangle> >& adjacencyList ) {
         for(auto& badTriangle : badTriangles) {
-            _triangulation.erase(badTriangle);
-            adjacencyList.erase(badTriangle);
-            for(auto& triangle : adjacency_list[badTriangle]) {
+            for(auto& triangle : adjacencyList[badTriangle]) {
                 adjacencyList[triangle].erase(badTriangle);
             }
+            _triangulation.erase(badTriangle);
+            adjacencyList.erase(badTriangle);
+        }
+    }
+    void _removeBadTriangles(const std::vector<Triangle>& badTriangles, std::set<Triangle>& _triangulation, std::map<Triangle, std::set<Triangle>>& adjacencyList) {
+        std::vector<Triangle> trianglesToRemove;
+
+        // First, collect the triangles to be removed
+        for (const auto& badTriangle : badTriangles) {
+            for (const auto& triangle : adjacencyList[badTriangle]) {
+                trianglesToRemove.push_back(triangle);
+            }
+            trianglesToRemove.push_back(badTriangle);
+        }
+
+        // Then, remove the collected triangles from _triangulation and adjacencyList
+        for (const auto& triangle : trianglesToRemove) {
+            for (auto& neighbor : adjacencyList[triangle]) {
+                adjacencyList[neighbor].erase(triangle);
+            }
+            _triangulation.erase(triangle);
+            adjacencyList.erase(triangle);
         }
     }
     
@@ -103,20 +133,36 @@ public:
         return newTriangles;
     }
     
-    
-    std::vector<Triangle> findNeighborsOfBadTriangles(const std::vector<Triangle>& badTriangles, const std::map<Triangle, std::set<Triangle>>& adjacencyList) {
-        std::vector<Triangle> newNeighbors;
-        std::map<Triangle, int> TrianglesCount;
-
-        for (const Triangle& triangle : badTriangles) {
-            for(const Triangle& adjacentTriangle : adjacencyList.at(triangle)) {
-                TrianglesCount[adjacentTriangle]++;
+    void removeConnectedToSuperTriangle(std::set<Triangle>& triangulation, const Triangle& superTriangle) {
+        std::set<Edge> triangleEdges = superTriangle.generateEdges();
+        for(auto& triangle : triangulation) {
+            if(triangle.hasCommonEdgeTo(triangleEdges)) {
+                triangulation.erase(triangle);
+                adjacency_list.erase(triangle);
+                for(auto& t : adjacency_list[triangle]) {
+                    adjacency_list[t].erase(triangle);
+                }
             }
         }
+    }
 
-        for(const auto& pair : TrianglesCount) {
-            if (pair.second == 1) {
-                newNeighbors.push_back(pair.first);
+    
+    
+    std::vector<Triangle> findNeighborsOfBadTriangles(const std::vector<Triangle>& badTriangles, const std::map<Triangle, std::set<Triangle>>& adjacencyList) {
+        std::vector <Triangle> newNeighbors;
+        
+        std::map<Triangle, bool> zliMapa;
+        for(auto& badtriangle : badTriangles) {
+            zliMapa[badtriangle] = true;
+        }
+        
+        for (const Triangle& triangle : badTriangles) {
+            for(const Triangle& adjacentTriangle : adjacencyList.at(triangle)) {
+                auto it = zliMapa.find(adjacentTriangle);
+                if (it == zliMapa.end()) {
+                    newNeighbors.push_back(adjacentTriangle);
+                    zliMapa[adjacentTriangle] = false;
+                }
             }
         }
 
@@ -187,8 +233,56 @@ public:
         
     }
     
-    
     Triangle findTriangleContainingPoint(const Point& point) {
+        if (triangulation.empty()) {
+            throw std::runtime_error("Triangulation is empty.");
+        }
+
+        // Define a lambda function for comparing triangles based on distance to the point
+        auto compare = [&point](const Triangle& a, const Triangle& b) {
+            double distanceA = point.distanceTo(a.getRoundedCircumCentre());
+            double distanceB = point.distanceTo(b.getRoundedCircumCentre());
+            return distanceA > distanceB; // We want the smallest distance at the top
+        };
+
+        // Priority queue with the custom comparator
+        std::priority_queue<Triangle, std::vector<Triangle>, decltype(compare)> queue(compare);
+
+        // Start from the first triangle in the set
+        auto currentTriangleIt = triangulation.begin();
+        Triangle currentTriangle = *currentTriangleIt;
+        queue.push(currentTriangle);
+
+        // Use a set to keep track of visited triangles to avoid loops
+        std::unordered_set<Triangle> visited;
+
+        while (!queue.empty()) {
+            currentTriangle = queue.top();
+            queue.pop();
+
+            if (visited.find(currentTriangle) != visited.end()) {
+                continue; // Skip already visited triangles
+            }
+
+            if (currentTriangle.doesContainPoint(point)) {
+                return currentTriangle; // Found the triangle containing the point
+            }
+
+            visited.insert(currentTriangle);
+
+            // Add unvisited neighbors to the priority queue
+            for (const Triangle& neighbor : adjacency_list[currentTriangle]) {
+                if (visited.find(neighbor) == visited.end()) {
+                    queue.push(neighbor);
+                }
+            }
+        }
+
+        throw std::runtime_error("No containing triangle found.");
+    }
+    
+    
+    Triangle _findTriangleContainingPoint(const Point& point) {
         if (triangulation.empty()) {
             throw std::runtime_error("Triangulation is empty.");
         }
@@ -225,7 +319,7 @@ public:
             }
 
             if (!foundNeighbor) {
-                throw std::runtime_error("No containing triangle found.");
+                throw std::runtime_error("No containing triangle found.- three colinear");
             }
 
             // Move to the neighbor closest to the point
@@ -238,20 +332,13 @@ public:
     
     
     
-    Triangle calculateSuperTriangle(int rectX, int rectY, int rectWidth, int rectHeight) {
-        // Find the center of the rectangle
-        Point rectCenter(rectX + rectWidth / 2, rectY + rectHeight / 2);
+    Triangle calculateSuperTriangle(int rectWidth, int rectHeight) {
 
-        // Calculate the half-diagonal of the rectangle
-        double halfDiagonal = std::sqrt((rectWidth / 2.0) * (rectWidth / 2.0) + (rectHeight / 2.0) * (rectHeight / 2.0));
-
-        // Calculate the vertices of the super triangle
-        Point superTriangleA(rectCenter.x, rectCenter.y - static_cast<int>(2 * halfDiagonal));
-        Point superTriangleB(rectCenter.x - static_cast<int>(1.5 * halfDiagonal), rectCenter.y + static_cast<int>(halfDiagonal));
-        Point superTriangleC(rectCenter.x + static_cast<int>(1.5 * halfDiagonal), rectCenter.y + static_cast<int>(halfDiagonal));
-
-        // Return the super triangle
-        return Triangle(superTriangleA, superTriangleB, superTriangleC);
+        Point A = Point(0, 0);
+        Point B = Point(2 * rectWidth, 0);
+        Point C = Point(0, 2*rectHeight);
+       
+        return Triangle(A, B, C);
     }
 
 };

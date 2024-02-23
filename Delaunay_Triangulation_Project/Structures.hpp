@@ -13,6 +13,7 @@
 #include <set>
 #include <vector>
 #include <cmath>
+#include <map>
 
 struct Point {
     int x;
@@ -33,7 +34,7 @@ struct Point {
     }
     
     friend std::ostream& operator<<(std::ostream& os, const Point& point) {
-        os << " (" << point.x << ", " << point.y << ") ";
+        os << point.x << " " << point.y;
         return os;
     }
 };
@@ -129,13 +130,31 @@ public:
     }
     
 
-    bool doesContainPoint(Point p) const  {
+    bool _doesContainPoint(Point p) const  {
         double detT = (b.y - c.y) * (a.x - c.x) + (c.x - b.x) * (a.y - c.y);
         double alpha = ((b.y - c.y) * (p.x - c.x) + (c.x - b.x) * (p.y - c.y)) / detT;
         double beta = ((c.y - a.y) * (p.x - c.x) + (a.x - c.x) * (p.y - c.y)) / detT;
         double gamma = 1 - alpha - beta;
 
         return (alpha >= 0) && (beta >= 0) && (gamma >= 0) && (alpha <= 1) && (beta <= 1) && (gamma <= 1);
+    }
+    
+    float area(const Point& p1, const Point& p2, const Point& p3) {
+        return std::abs((p1.x * (p2.y - p3.y) + p2.x * (p3.y - p1.y) + p3.x * (p1.y - p2.y)) / 2.0);
+    }
+
+    bool doesContainPoint(const Point& p) {
+        float A = area(a, b, c);
+        float A1 = area(p, b, c);
+        float A2 = area(a, p, c);
+        float A3 = area(a, b, p);
+        
+
+        float epsilon = std::numeric_limits<float>::epsilon();
+        if(!(A1 > epsilon && A2 > epsilon && A3 > epsilon)){
+            return false;
+        }
+        return std::abs(A - (A1 + A2 + A3)) < epsilon;
     }
     
     bool circumCircleContainPoint(Point p) const {
@@ -153,8 +172,30 @@ public:
         return edges;
     }
     
+    bool hasCommonEdgeTo(const std::set<Edge>& triangleEdges) const {
+        std::set<Edge> myEdges = generateEdges();
+        std::map<Edge, int> edgeCount;
+        for(auto& e : myEdges) {
+            edgeCount[e]++;
+        }
+        for(auto& e : triangleEdges) {
+            edgeCount[e]++;
+        }
+        for (const auto& pair : edgeCount) {
+            if (pair.second == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+//    friend std::ostream& operator<<(std::ostream& os, const Triangle& triangle) {
+//        os << "Triangle: " << triangle.a << ", " << triangle.b << ", " << triangle.c;
+//        return os;
+//    }
+    
     friend std::ostream& operator<<(std::ostream& os, const Triangle& triangle) {
-        os << "Triangle: " << triangle.a << ", " << triangle.b << ", " << triangle.c;
+        os << triangle.a << " " << triangle.b << " " << triangle.c;
         return os;
     }
 

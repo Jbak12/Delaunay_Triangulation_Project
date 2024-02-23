@@ -14,6 +14,9 @@ all: $(TARGETS)
 
 
 clean:
-	rm -f $(OBJS) $(TARGETS)
+	rm -f $(OBJS) $(TARGETS) triangles.txt
+	
+run_python:
+	python3 ReadFile.py
 
 .PHONY: all run clean
